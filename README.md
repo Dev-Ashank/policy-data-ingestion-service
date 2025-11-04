@@ -188,8 +188,6 @@ Coverage threshold: ≥70% for branches, functions, lines, and statements
 - ✅ Total: ~113 comprehensive tests
 - ✅ All tests currently FAILING (as expected in TDD Red Phase)
 
-See [TEST_SUITE.md](TEST_SUITE.md) for detailed test documentation.
-
 ## 👥 Author
 
 Built following SOLID principles, Clean Architecture, and Test-Driven Development
