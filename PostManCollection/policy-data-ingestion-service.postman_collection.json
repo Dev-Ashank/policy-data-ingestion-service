@@ -1,0 +1,257 @@
+{
+	"info": {
+		"_postman_id": "1efb4e0f-f3a8-4494-97a2-793f2b34702f",
+		"name": "policy-data-ingestion-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32462402"
+	},
+	"item": [
+		{
+			"name": "healthCheck",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/path/to/your/policies.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"upload"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST http://localhost:3000/api/upload \\\n  -F \"file=@/path/to/your/policies.csv\""
+			},
+			"response": []
+		},
+		{
+			"name": "upload status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/upload/status/{jobId}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"upload",
+						"status",
+						"{jobId}"
+					]
+				},
+				"description": "Generated from cURL: curl http://localhost:3000/api/upload/status/{jobId}"
+			},
+			"response": []
+		},
+		{
+			"name": "search by policyNumber",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/policies/search?policyNumber=POL123456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"policies",
+						"search"
+					],
+					"query": [
+						{
+							"key": "policyNumber",
+							"value": "POL123456"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl --location 'http://localhost:3000/api/policies/search?policyNumber=POL123456'"
+			},
+			"response": []
+		},
+		{
+			"name": "search policy by email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/policies/search?userEmail=john@example.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"policies",
+						"search"
+					],
+					"query": [
+						{
+							"key": "userEmail",
+							"value": "john@example.com"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl \"http://localhost:3000/api/policies/search?userEmail=john@example.com\""
+			},
+			"response": []
+		},
+		{
+			"name": "All policies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/policies/search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"policies",
+						"search"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'http://localhost:3000/api/policies/search'"
+			},
+			"response": []
+		},
+		{
+			"name": "search by date range",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/policies/search?startDate=2019-01-01&endDate=2019-12-01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"policies",
+						"search"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "2019-01-01"
+						},
+						{
+							"key": "endDate",
+							"value": "2019-12-01"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl --location 'http://localhost:3000/api/policies/search?startDate=2024-01-01&endDate=2024-12-31'"
+			},
+			"response": []
+		},
+		{
+			"name": "search pagination",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Policy by policy number",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Aggergate policy by user",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Schedule a message",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "get all scheduled message",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "get all scheduled message with filters",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "message status",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "cancel scheduled message",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
