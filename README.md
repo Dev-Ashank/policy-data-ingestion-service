@@ -57,9 +57,20 @@ cp .env.example .env
 # Edit .env with your configuration
 ```
 
-4. Start MongoDB (using Docker):
+4. Start MongoDB & Run Service
+
+#### Option A: Using Docker (Recommended)
 ```bash
+# Start MongoDB in Docker
 docker-compose up -d
+
+# Run the service
+npm run dev
+```
+
+#### Option B: Using Local MongoDB
+```bash
+# Make sure MongoDB is running locally on port 27017
 ```
 
 ### Running the Application
