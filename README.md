@@ -42,7 +42,7 @@ A Node.js + MongoDB service for ingesting policy data from CSV/XLSX files using 
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/Dev-Ashank/policy-data-ingestion-service.git
 cd policy-data-ingestion-service
 ```
 
